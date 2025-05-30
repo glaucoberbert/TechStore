@@ -1,0 +1,91 @@
+<!-- Aqui usamos a extensão Live Server que é maravilhosa, ela permite que toda alteração
+ feita no código já é atualizada em tempo real e não precisa ficar dando infinitos F5 
+ pra recarregar várias e várias vezes a tela -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore</title>
+    <link rel="stylesheet" href="css/style.css"> <!--Link com o Css pra ele funcionar-->
+</head>
+<body>
+
+    <header> <!--Div semântica de Cabeçalho-->
+        <div class="nome-loja">TechStore</div>
+
+        <nav> <!--Div semântica de Navegação ou Menu-->
+            <ul class="menu"> <!--Lista não ordenada-->
+                <li class="item-menu"><a href="#">Início</a></li>
+                <li class="item-menu"><a href="#">Produtos</a></li>
+                <li class="item-menu"><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!--Div semântica de conteúdo principal-->
+        <p class="categoria">Produtos em Destaque</p>
+
+        <div class="vitrine">
+
+            <div class="produto"> <!--Div geral que armazena todos os dados do produto-->
+
+                <div class="img-produto"> <!--Div específica que armazena somente as imagens do produto-->
+                    <img src="img/mouse.jpg" alt="Mouse Gamer RGB" > <!-- height="150px" Isso se tornou inútil porque no css
+                    eu peguei todas as imagens que estão dentro da class img produto e coloquei todas dentro
+                    do mesmo tamanho, aí ficou top-->
+                </div>
+
+                <div class="txt-produto">  <!--Div específica que armazena somente os arquivos de texto do produto-->
+                <P class="nome-prod">Mouse Gamer RGB</P>
+                <p class="descricao">Alta precisão, iluminação RGB.</p>
+                <p class="preco">R$ 7.129,90</p>
+                <a href="#">Comprar</a>
+                </div>
+
+            </div>
+
+            <div class="produto"> <!--Div geral que armazena todos os dados do produto-->
+
+                <div class="img-produto img-maior"> <!--Div específica que armazena somente as imagens do produto-->
+                    <img src="img/monitor.jpg" alt="">  <!-- height="150px" Isso se tornou inútil porque no css
+                    eu peguei todas as imagens que estão dentro da class img produto e coloquei todas dentro
+                    do mesmo tamanho, aí ficou top-->
+                </div> 
+
+                <div class="txt-produto"> <!--Div específica que armazena somente os arquivos de texto do produto-->
+                <p class="nome-prod">Monitor</p>
+                <p class="descricao">Monitor Gamer 32' Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident impedit itaque tenetur, illum aperiam delectus nulla quia adipisci perferendis beatae, architecto rerum? Deleniti dicta quos, esse illum eum unde reprehenderit.</p>
+                <p class="preco">R$ 12.312,00</p>
+                <a href="#">Comprar</a>
+
+                </div>
+                
+            </div> 
+
+            <div class="produto"> <!--Div geral que armazena todos os dados do produto-->
+
+                <div class="img-produto"> <!--Div específica que armazena somente as imagens do produto-->
+                    <img src="img/teclado.jpg" alt="" >  <!-- height="150px" Isso se tornou inútil porque no css
+                    eu peguei todas as imagens que estão dentro da class img produto e coloquei todas dentro
+                    do mesmo tamanho, aí ficou top-->
+                </div>
+
+                <div class="txt-produto"> <!--Div específica que armaezena somente os textos do produto-->
+                    <p class="nome-prod">Teclado Gamer RGB.</p>
+                    <p class="descricao">Alta precisão, iluminação RGB</p>
+                    <p class="preco">R$ 66.150,00</p>
+                    <a href="#">Comprar</a>
+                </div>
+                
+            </div>
+    </main>
+
+    <footer> <!--div semântica de rodapé-->
+        <p>&copy; 2025 TechStore Todos os direitos reservados</p> <!--Só de colocar "&copy" ele já
+        gera sózinho o símbolo e o início do negócio do copyright-->
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+*{
+    margin: 0; /*Margem externa*/
+    padding: 0; /*Margem interna*/
+    ;
+}
+
+header{
+    background-color: rgb(46, 34, 156); /*Cor do fundo*/
+    padding: 25px; /*Espaçamento Interno*/
+    color: white; /*Quando coloca Color ele interpreta que são as letras*/
+    text-align: center;
+}
+
+.nome-loja{
+    font-size: 26px; /*Tamanho da Fonte*/
+    font-weight: 700; /*negrito*/
+    display: inline-block; /*Para que o texto fique ao lado*/
+    width: 200px; /*Largura*/
+    text-shadow: 0px 0px 10px yellow;
+}
+
+nav{
+    display: inline-block;
+    width: 400px; /*Largura*/
+}
+
+body{
+    font-family: Arial, sans-serif; /*mudando a fonte*/
+}
+
+.menu{
+    list-style: none; /*remove os marcadores*/
+}
+
+.item-menu{
+    display: inline-block; /*coloca os itens lado a lado*/
+    margin: 10px 15px   ; /*margem entre os itens, fazendo assim ele vai distanciar os itens do menu, desse jeito ele deixou uma margem de 10 em cima e embaixo e uma margem maior de 15 na direita e esquerda*/
+}
+
+.item-menu a{ /*Se colocaer só no item menu não vai dar certo pq aí vai ser como se ele tivesse editando o li do HTML e o objetivo é editar o a, por isso fizemos isso*/
+    text-decoration: none; /*remove aquele sublinahdo que tem abaixo dos links*/
+    color: white; /*mudando a cor dos links daquele azul fei pra branco*/
+    text-shadow: 0px 0px 10px yellow;
+}
+
+.produto{
+    display: inline-block; /*coloca as divs em linha*/
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    width: 251px; /*limita a largura da div pra mesmo que o texto seja imenso, a largura continue setada*/
+}
+
+.img-produto img{ /*formatação da imagem dentro daquele conjunto*/
+    height: 200px; /*Pega somente a div de imagem e muda só a altura da imagem sem mexer no txt*/
+}
+
+.img-produto{ /*formatação daquele conjunto em si*/
+    width: 250px; /*Pega a div que contém todas as informações do produto, seja texto ou
+    imagem e coloca a largura máxima de 250 px pra todas as divs ficarem com a mesma largura*/
+    overflow: hidden; /*faz com que se o conteúdo da div for maior que a própria div, a div
+    não mostre o excesso*/
+    border-radius: 15px 15px 0 0; /*faz com que a imagem fique arredondada, mas só no topo,
+    mantendo o inferior zerado*/
+}
+
+.img-maior{
+    height: 200px; /*peguei a div que vou usar sempre que tiver uma imagem que estrapole no tamanho
+    e coloquei ela no mesmo tamanho das outras divs porque isso é padrão*/
+}
+
+.img-maior img{
+    height: 150px; /*peguei a imagem dentro da div e diminuí o tamanho dela, mostrando que essa div
+    tem o mesmo tamanho das outras mas as imagens dentro delas tem tamanho reduzido*/
+}
+
+.vitrine{
+    text-align: center;
+}
+
+.categoria{ /*Categoria é aonde ta o produtos em destaque apenas*/
+    font-size: 48px; /*tamanho da fonte*/
+    text-align: center; /*Centraliza o texto*/
+    margin: 40px 0 20px 0; /*margem entre o cabeçalho, a categoria e o produto*/
+    font-weight: 700; /*negrito*/
+}
+
+.nome-prod{
+    font-size: 22px; /*tamanho da fonte*/
+    font-weight: 600; /*negrito*/
+    margin: 10px 0; /*Margem ao redor do nome do produto, dessa forma, as laterais não tem margem mas
+    a parte de cima e a debaixo tem 10 de margem*/
+}
+
+.descricao{
+    font-size: 14px; /*tamanho da fonte*/
+    margin: 0 10px; /*margem nenhuma cima/baixo e 10 pixels de margem direita/esquerda*/
+    height: 50px; /*definiu altura fixa da div descrição e com isso todas as descrições partem da mesma 
+    altura*/
+    overflow: auto; /*se olhar bem, agora a descrição não passou mais por cima do valor, ficou com a barra
+    de rolagem, assim fica tudo com o mesmo tamanho e se alguma descrição muito grande passar, não vai
+    atrapalhar o visual*/
+}
+
+.preco{
+    color: blue; /*cor da letra*/
+    font-size: 22px; /*tamanho da fonte*/
+    font-weight: 600; /*negrito*/
+    margin: 15px 0; /*margem em cima e embaixo pra não ficar grudado nem no comprar nem na descrição*/
+}
+
+.txt-produto a{ /*vai mexer só no link que está dentro da div txt produto, sem mexer nos links do cabeçalho*/
+    width: 100%; /*o link vai ocupar todo o espaço da div txt produto*/
+    background-color: rgb(37, 37, 155); /*cor de fundo do link*/
+    color: white; /*cor da letra do link*/
+    font-weight: 700; /*negrito*/
+    font-size: 25px; /*tamanho da fonte*/
+    display: inline-block; /*o link vai ficar em linha com a descrição, sem quebrar a linha, o que 
+    vai permitir que o fundo azul preencha toda a base da div, e não apenas o contorno da palavra*/
+    padding: 10px; /*diferente do margin, esse vai mexer só na borda interna, ou seja, o espaço entre 
+    o texto e a borda do azul*/
+    box-sizing: border-box; /*O tamanho vai ser contado na borda do elemento e não só pelo conteúdo*/
+    border-radius: 7px; /*arredondamento da borda do link pra não ficar um quadradão bruto*/
+    text-decoration: none; /*Por padrão, o link vem com um sublinhado embaixo que fica visualmente
+    feio, com esse comando removemos essa linha que passa por baixo do link*/
+}
+
+.txt-produto{
+    margin: 10px; /*criei um espaçamento externo para que o botão azul de comprar não ficasse grudado 
+    nas laterais, deixando de preencher toda a base da parada*/
+}
+
+footer{
+    height: 20px; /*altura*/
+    width: 100%; /*largura*/
+    color: white; /*cor da fonte*/
+    font-weight: 600; /*negrito*/
+    font-size: 17px; /*tamanho da fonte*/
+    text-align: center; /*centraliza o texto*/
+    background-color: rgb(46, 34, 156);; /*cor de fundo*/
+    position: fixed; /*posição fixa, independente do que rolar ele n sai da tela*/
+    bottom: 0; /*parte mais inferior possível da página, bottom é tipo canto inferior*/
+    left: 0; /*partindo da parte mais a esquerda da página, evita de dar bordas laterais*/
+    padding: 20px 0 ; /*foi utilizado pra deixar o retângulo com o texto mais altinho, e
+    o texto centralizado sem ficar grudado em cima ou embaixo, assim ele ficou
+    exatamente no meio*/
+    
+}
+
+main{
+    margin-bottom: 80px; /*criei um espaçamento externo para que o rodapé não fique grudado na parte
+    debaixo das divs dos produtos quando precisar rolar a página*/
+}
