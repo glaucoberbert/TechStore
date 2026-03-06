@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechStore</title>
+    <title>TechStore Produtos</title>
     <link rel="stylesheet" href="css/style.css"> <!--Link com o Css pra ele funcionar-->
 </head>
 <body>
@@ -24,29 +24,24 @@
         </nav>
     </header>
 
-    <main> <!--Div semântica de conteúdo principal-->
-        <p class="categoria">Produtos em Destaque</p>
+    <main id="main-produto">
+      <div class="filtro">
+        <p class="titulo">Marca</p>
+            <select class="select-filtro">
+                <option value="Dell">Dell</option>
+                <option value="Lenovo">Lenovo</option>
+                <option value="Vaio">Vaio</option>
+                <option value="Apple">Apple</option>
+            </select>
+            
+        <p class="titulo">Preço</p>
+            <input class="campo-filtro" type="text" placeholder="De">
+            <input class="campo-filtro" type="text" placeholder="Até">
+      </div>  
 
-        <div class="vitrine">
-
-            <div class="produto"> <!--Div geral que armazena todos os dados do produto-->
-
-                <div class="img-produto"> <!--Div específica que armazena somente as imagens do produto-->
-                    <img src="img/mouse.jpg" alt="Mouse Gamer RGB" > <!-- height="150px" Isso se tornou inútil porque no css
-                    eu peguei todas as imagens que estão dentro da class img produto e coloquei todas dentro
-                    do mesmo tamanho, aí ficou top-->
-                </div>
-
-                <div class="txt-produto">  <!--Div específica que armazena somente os arquivos de texto do produto-->
-                <P class="nome-prod">Mouse Gamer RGB</P>
-                <p class="descricao">Alta precisão, iluminação RGB.</p>
-                <p class="preco">R$ 7.129,90</p>
-                <a href="#">Comprar</a>
-                </div>
-
-            </div>
-
-            <div class="produto"> <!--Div geral que armazena todos os dados do produto-->
+      <div class="vitrine">
+        
+        <div class="produto"> <!--Div geral que armazena todos os dados do produto-->
 
                 <div class="img-produto img-maior"> <!--Div específica que armazena somente as imagens do produto-->
                     <img src="img/monitor.jpg" alt="">  <!-- height="150px" Isso se tornou inútil porque no css
@@ -79,9 +74,28 @@
                     <a href="#">Comprar</a>
                 </div>
                 
-            </div>
-    </main>
+            </div> <!-- Div Produto -->
+            
+            <div class="produto"> <!--Div geral que armazena todos os dados do produto-->
 
+                <div class="img-produto"> <!--Div específica que armazena somente as imagens do produto-->
+                    <img src="img/mouse.jpg" alt="Mouse Gamer RGB" > <!-- height="150px" Isso se tornou inútil porque no css
+                    eu peguei todas as imagens que estão dentro da class img produto e coloquei todas dentro
+                    do mesmo tamanho, aí ficou top-->
+                </div>
+
+                <div class="txt-produto">  <!--Div específica que armazena somente os arquivos de texto do produto-->
+                <P class="nome-prod">Mouse Gamer RGB</P>
+                <p class="descricao">Alta precisão, iluminação RGB.</p>
+                <p class="preco">R$ 7.129,90</p>
+                <a href="#">Comprar</a>
+                </div>
+
+            </div> <!--Div Produto -->
+
+      </div> <!--Div vitrine-->
+    </main>
+    
     <footer> <!--div semântica de rodapé-->
         <p>&copy; 2025 TechStore Todos os direitos reservados</p> <!--Só de colocar "&copy" ele já
         gera sózinho o símbolo e o início do negócio do copyright-->

@@ -1,0 +1,69 @@
+<!-- Aqui usamos a extensão Live Server que é maravilhosa, ela permite que toda alteração
+ feita no código já é atualizada em tempo real e não precisa ficar dando infinitos F5 
+ pra recarregar várias e várias vezes a tela -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore Contatos</title>
+    <link rel="stylesheet" href="css/style.css"> <!--Link com o Css pra ele funcionar-->
+</head>
+<body>
+
+    <header> <!--Div semântica de Cabeçalho-->
+        <div class="nome-loja">TechStore</div>
+
+        <nav> <!--Div semântica de Navegação ou Menu-->
+            <ul class="menu"> <!--Lista não ordenada-->
+                <li class="item-menu"><a href="index.html">Início</a></li>
+                <li class="item-menu"><a href="produtos.html">Produtos</a></li>
+                <li class="item-menu"><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+     <form>
+        <!-- O Label é o que coloca o texto ao lado esquerdo da caixinha de seleção, diferente do placeholder que coloca dentro -->
+        <label for="nome">Nome</label>
+        <input type="text" id="nome">
+        <label for="email">E-mail</label>
+        <input type="text" id="email">
+        
+
+        <!--Caixa de Seleção-->
+        <label for="setor">Setor</label>
+        
+        <select id="setor">
+            <option value="Vendas">Vendas</option>
+            <option value="Financeiro">Financeiro</option>
+            <option value="Outros">Outros</option>
+        </select>
+
+        <!-- Caixa de texto grande pra pessoa escrever -->
+        <label for="msg">Mensagem</label>
+        <textarea name="msg" id=""></textarea>
+
+        <div class="botoes">
+            
+            <!-- Botão de Enviar e Resetar -->
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Cancelar">
+
+            <!-- Tem um outro jeito de botão de enviar que é até legal, que é o button, ele permite que coloque ícone ao invés de texto, ou seja, um símbolozinho de salvar que você clica e ele faz a função de submit, diferente do input sumit que só permite texto -->
+            <!-- <button type="submit"><img src="" alt=""></button> -->
+        
+        </div> <!--Botões-->
+
+     </form>
+    </main>
+    
+    <footer> <!--div semântica de rodapé-->
+        <p>&copy; 2025 TechStore Todos os direitos reservados</p> <!--Só de colocar "&copy" ele já
+        gera sózinho o símbolo e o início do negócio do copyright-->
+    </footer>
+
+</body>
+</html>

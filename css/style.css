@@ -26,10 +26,12 @@ nav{
 
 body{
     font-family: Arial, sans-serif; /*mudando a fonte*/
+    height: 100vh;
 }
 
 .menu{
     list-style: none; /*remove os marcadores*/
+    height: 100%;
 }
 
 .item-menu{
@@ -77,6 +79,8 @@ body{
 
 .vitrine{
     text-align: center;
+    display: inline-block;
+    width: 100%;
 }
 
 .categoria{ /*Categoria é aonde ta o produtos em destaque apenas*/
@@ -151,4 +155,100 @@ footer{
 main{
     margin-bottom: 80px; /*criei um espaçamento externo para que o rodapé não fique grudado na parte
     debaixo das divs dos produtos quando precisar rolar a página*/
+    height: 100%;
+}
+
+#main-produto{
+    margin-bottom: 75px;
+    height: 100%;
+    display: flex;
+}
+
+.filtro{
+    display: inline-block;
+    width: 200px;
+    border-right: 1px solid #ccc;
+    height: 100%;
+    text-align: center;
+}
+
+.titulo{
+    font-weight: 900;
+    color: blue;
+    padding: 15px 0 10px;
+    text-align: center;
+}
+
+.select-filtro, .campo-filtro{
+    width: 150px;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ccc  ;
+    border-radius: 3px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* .campo-filtro::highlight{ /*Destaca um campo quando ele está selecionado*/
+
+.campo-filtro{
+    margin: 5px 0;
+}
+
+.campo-filtro::placeholder{ /*Assim vai mexer só no placeholder dentro do campo-filtro*/
+    color: #585858;
+}
+
+form{ /*Aqui vou mexer somente no formulário*/
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 15px; /*Arredondar bordas*/
+    padding: 15px; /*Esse mexe na distância do texto e a borda do lado de dentro, ele afasta o conteúdo das bordas da Div*/
+    margin: 40px auto; /*Esse mexe na distância da borda da div e a extremidade da página, ele afasta a div das extremidades da página*/
+
+}
+
+form label, form input, form textarea form select{
+    display: block; /*Display block deixa os itens um debaixo do outro, Display inline block deixa um ao lado do outro*/
+}
+
+form input, form textarea, form select{
+    padding: 5px; /*Aumenta o tamanho das caixas de texto, pra elas ficarem mais altas*/
+    width: 100%; /*Preenche toda a largura da div com exceção dos 5 pixels do padding, justamente pelo border box*/
+    box-sizing: border-box; /*Colocando como border-box todos os elementos medem a largura da mesma forma, fazendo com que todos fiquem alinhados, sem ele, aquele padding de 5 ali em cima ia interferir e deixar desalinhado, então sempre colocar pra deixar tudo do mesmo tamanho*/
+    margin: 5px 0;
+    background-color: rgba(27, 101, 240, 0.363); /*Cor do fundo*/
+    border: 1px solid #ccc; /*Tamanho e cor da borda*/
+    border-radius: 5px; /*Arredondar bordas*/
+    color: #585858; /*Cor do texto*/
+
+}
+
+form textarea{
+    height: 60px; /*controla o tamanho da caixa de texto*/
+}
+
+form input[type="submit"], form input[type="reset"] { /*Forma mais completa de definir algo, aqui to definindo o botão de enviar e resetar dentro da variável input dentro da div form*/
+    display: inline-block; /*Aqui pro botão de enviar ficar ao lado do de resetar, coloquei inline block, separou eles em linha, mas uma ao lado da outra*/  
+    width: 100px ;
+}
+
+.botoes{ /*Seleciona a Div botões*/
+    display: flex;
+    width: 100% ;
+    justify-content:space-around; /*Aqui vai distribuir os botões de enviar e resetar, tem vários modos diferentes*/
+}
+
+form input[type='submit']:hover{ /*Aqui vai acontecer o que está dentro dos colchetes quando o mouse passar por cima desse local*/
+    background-color: greenyellow;
+    color: #706f6f;
+    font-weight: 700; /*negrito*/
+    font-size: large; /*aumenta a fonte*/
+}
+
+form input[type='reset']:hover{
+    background-color: red;
+    color: #fff;
+    font-weight: 700; /*negrito*/
+    font-size: large; /*aumenta a fonte*/
 }
